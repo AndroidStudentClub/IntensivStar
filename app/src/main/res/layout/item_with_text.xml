@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/material_margin_super_small"
+    android:layout_marginLeft="@dimen/material_margin_super_small"
+    android:layout_marginEnd="@dimen/material_margin_super_small"
+    android:layout_marginBottom="@dimen/material_margin_normal"
+    android:orientation="vertical"
+    tools:background="@color/blueDark"
+    tools:ignore="RtlHardcoded">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_preview"
+        android:layout_width="@dimen/movie_card_width"
+        android:layout_height="@dimen/movie_card_height"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+        tools:background="@color/white"
+        tools:src="@drawable/ic_avatar" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="@dimen/movie_card_text_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/material_margin_super_small"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        tools:text="Мир дикого запада"
+        tools:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/movie_rating"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/colorControlNormal"
+        android:stepSize="0.5"
+        tools:rating="5" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="material_margin_normal">16dp</dimen>
+    <dimen name="material_margin_small">8dp</dimen>
+    <dimen name="material_margin_super_small">4dp</dimen>
+
+    <dimen name="image_preview_height">120dp</dimen>
+    <dimen name="image_preview_width">75dp</dimen>
+
+    <!-- Avatar -->
+    <dimen name="avatar_size">120dp</dimen>
+
+    <!-- Movie Card Item -->
+    <dimen name="movie_card_width">130dp</dimen>
+    <dimen name="movie_card_height">170dp</dimen>
+    <dimen name="movie_card_text_width">96dp</dimen>
+    <dimen name="close_width">20dp</dimen>
+
+
+
+</resources>

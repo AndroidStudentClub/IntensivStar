@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/home_dest">
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="ru.mikhailskiy.intensiv.ui.feed.FeedFragment"
+        android:label="@string/home"
+        tools:layout="@layout/feed_fragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/flow_step_one_dest"
+        android:name="ru.mikhailskiy.intensiv.ui.movie_details.MovieDetailsFragment"
+        tools:layout="@layout/movie_details_fragment">
+        <argument
+            android:name="flowStepNumber"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/next_action"
+            app:destination="@+id/flow_step_two_dest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/flow_step_two_dest"
+        android:name="ru.mikhailskiy.intensiv.ui.movie_details.MovieDetailsFragment"
+        tools:layout="@layout/movie_details_fragment">
+
+        <argument
+            android:name="flowStepNumber"
+            android:defaultValue="2"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/next_action"
+            app:popUpTo="@id/home_dest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tv_shows_dest"
+        android:name="ru.mikhailskiy.intensiv.ui.tvshows.TvShowsFragment"
+        android:label="@string/tv_show"
+        tools:layout="@layout/tv_shows_fragment">
+
+        <argument
+            android:name="myarg"
+            android:defaultValue="Android!" />
+    </fragment>
+    <fragment
+        android:id="@+id/movie_details_fragment"
+        android:name="ru.mikhailskiy.intensiv.ui.movie_details.MovieDetailsFragment"
+        android:label="details_fragment"
+        tools:layout="@layout/movie_details_fragment" />
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="ru.mikhailskiy.intensiv.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/search_dest"
+        android:name="ru.mikhailskiy.intensiv.ui.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search" />
+</navigation>

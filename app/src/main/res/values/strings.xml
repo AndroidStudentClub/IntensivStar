@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Мои фильмы</string>
+
+    <string name="search_hint">Введите название</string>
+
+    <string name="main_title">Что будете смотреть\nсегодня?</string>
+    <string name="recommended">Рекомендуем</string>
+    <string name="popular">Популярные</string>
+    <string name="upcoming">Новинки</string>
+
+    <string name="home">Главная</string>
+
+    <string name="more">Ещё…</string>
+    <string name="tv_shows">Сериалы</string>
+    <string name="profile">Профиль</string>
+    <string name="search">Поиск</string>
+    <string name="later">44\n Буду смотреть</string>
+
+    <string name="tv_show">Телесериалы</string>
+    <string name="close">закрыть</string>
+
+    <string-array name="tab_titles">
+        <item>23\n Понравилось</item>
+        <item>@string/later</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="placeholder">Пёс Киноман</string>
+</resources>
