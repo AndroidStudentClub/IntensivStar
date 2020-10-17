@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ru.mikhailskiy.intensiv.ui.movie_details.MovieDetailsFragment">
+    tools:context="ru.mikhailskiy.intensiv.presentation.movie_details.MovieDetailsFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

@@ -52,7 +52,7 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <ru.mikhailskiy.intensiv.ui.SearchBar
+                        <ru.mikhailskiy.intensiv.presentation.SearchBar
                             android:id="@+id/search_toolbar"
                             android:layout_width="match_parent"
                             android:layout_height="56dp"
