@@ -87,4 +87,6 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.rxRetrofitAdapter"
+
+    implementation "org.koin:koin-android:$rootProject.koin"
 }

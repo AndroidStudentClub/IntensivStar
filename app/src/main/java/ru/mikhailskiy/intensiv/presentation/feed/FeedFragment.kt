@@ -11,6 +11,7 @@ import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import kotlinx.android.synthetic.main.feed_fragment.*
 import kotlinx.android.synthetic.main.feed_header.*
 import kotlinx.android.synthetic.main.search_toolbar.view.*
+import org.koin.android.ext.android.inject
 import ru.mikhailskiy.intensiv.BuildConfig
 import ru.mikhailskiy.intensiv.R
 import ru.mikhailskiy.intensiv.data.repository.TopRatedMoviesRemoteRepository
@@ -21,10 +22,8 @@ import timber.log.Timber
 
 class FeedFragment : Fragment(), FeedPresenter.FeedView {
 
-    // Инициализируем
-    private val presenter: FeedPresenter by lazy {
-        FeedPresenter(TopRatedMoviesUseCase(TopRatedMoviesRemoteRepository()))
-    }
+    // Инициализируем через Koin
+    private val presenter: FeedPresenter by inject()
 
     private val adapter by lazy {
         GroupAdapter<GroupieViewHolder>()
@@ -44,6 +43,7 @@ class FeedFragment : Fragment(), FeedPresenter.FeedView {
 
         // Добавляем в presenter имплементацию FeedView
         presenter.attachView(this)
+
 
         // Добавляем recyclerView
         movies_recycler_view.layoutManager = LinearLayoutManager(context)
@@ -132,17 +132,4 @@ class FeedFragment : Fragment(), FeedPresenter.FeedView {
     companion object {
         const val API_KEY = BuildConfig.THE_MOVIE_DATABASE_API
     }
-
-//    val moviesList = listOf(
-//        MainCardContainer(
-//            R.string.recommended,
-//            MockRepository.getMovies().map {it->
-//                MovieItem(it) { movie ->
-//                    openMovieDetails(
-//                        movie
-//                    )
-//                }
-//            }.toList()
-//        )
-//    )
 }

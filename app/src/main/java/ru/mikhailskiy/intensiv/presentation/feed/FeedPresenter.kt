@@ -1,13 +1,16 @@
 package ru.mikhailskiy.intensiv.presentation.feed
 
 import android.annotation.SuppressLint
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 import ru.mikhailskiy.intensiv.data.vo.Movie
 import ru.mikhailskiy.intensiv.domain.usecase.TopRatedMoviesUseCase
 import ru.mikhailskiy.intensiv.presentation.base.BasePresenter
 import timber.log.Timber
 
-class FeedPresenter(private val useCase: TopRatedMoviesUseCase) :
-    BasePresenter<FeedPresenter.FeedView>() {
+class FeedPresenter : BasePresenter<FeedPresenter.FeedView>(), KoinComponent {
+
+    private val useCase: TopRatedMoviesUseCase by inject()
 
     @SuppressLint("CheckResult")
     fun getMovies() {
