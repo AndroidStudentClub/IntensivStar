@@ -4,6 +4,7 @@ import android.app.Application
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
 import ru.mikhailskiy.intensiv.di.dataModule
 import ru.mikhailskiy.intensiv.di.domainModule
 import ru.mikhailskiy.intensiv.di.presentationModule
@@ -17,7 +18,7 @@ class MovieFinderApp : Application() {
         initDebugTools()
 
         startKoin {
-            androidLogger()
+            androidLogger(Level.DEBUG)
             androidContext(this@MovieFinderApp)
             modules(domainModule, presentationModule, dataModule)
         }
