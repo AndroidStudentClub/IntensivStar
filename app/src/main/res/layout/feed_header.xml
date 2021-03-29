@@ -11,7 +11,7 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:minHeight="100dp"
+            android:minHeight="@dimen/min_height"
             app:collapsedTitleTextAppearance="@style/AppTheme.Title.Collapsed"
             app:expandedTitleTextAppearance="@style/AppTheme.Title.Expanded"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -52,17 +52,17 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <ru.mikhailskiy.intensiv.ui.SearchBar
+                        <ru.androidschool.intensiv.ui.SearchBar
                             android:id="@+id/search_toolbar"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="@dimen/search_bar_height"
                             android:layout_marginTop="@dimen/material_margin_normal"
                             android:layout_marginBottom="@dimen/material_margin_normal"
                             app:hint="@string/search_hint" />
 
                         <View
                             android:layout_width="match_parent"
-                            android:layout_height="32dp"
+                            android:layout_height="@dimen/material_margin_large"
                             android:background="@drawable/list_background" />
                     </LinearLayout>
                 </androidx.appcompat.widget.Toolbar>

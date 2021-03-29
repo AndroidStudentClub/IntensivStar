@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.imageview.ShapeableImageView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/image_preview"
     android:layout_width="@dimen/image_preview_width"
     android:layout_height="@dimen/image_preview_height"
     android:layout_margin="@dimen/material_margin_small"
+    tools:src="@drawable/ic_avatar"
     android:scaleType="centerCrop"
     app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
