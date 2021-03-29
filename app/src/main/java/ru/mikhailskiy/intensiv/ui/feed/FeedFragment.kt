@@ -1,7 +1,11 @@
 package ru.mikhailskiy.intensiv.ui.feed
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.View
+import android.view.ViewGroup
+import android.view.MenuInflater
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
@@ -77,7 +81,6 @@ class FeedFragment : Fragment() {
         )
 
         adapter.apply { addAll(newMoviesList) }
-
     }
 
     private fun openMovieDetails(movie: Movie) {
@@ -114,7 +117,6 @@ class FeedFragment : Fragment() {
         super.onStop()
         search_toolbar.clear()
     }
-
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.main_menu, menu)

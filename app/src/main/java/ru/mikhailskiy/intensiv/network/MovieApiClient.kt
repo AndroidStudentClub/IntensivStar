@@ -1,5 +1,3 @@
 package ru.mikhailskiy.intensiv.network
 
-object MovieApiClient {
-
-}
+object MovieApiClient
