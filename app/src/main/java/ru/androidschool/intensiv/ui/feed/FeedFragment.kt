@@ -6,17 +6,24 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
-import kotlinx.android.synthetic.main.feed_fragment.*
-import kotlinx.android.synthetic.main.feed_header.*
-import kotlinx.android.synthetic.main.search_toolbar.view.*
+import com.xwray.groupie.GroupieViewHolder
 import ru.androidschool.intensiv.R
 import ru.androidschool.intensiv.data.MockRepository
 import ru.androidschool.intensiv.data.Movie
+import ru.androidschool.intensiv.databinding.FeedFragmentBinding
+import ru.androidschool.intensiv.databinding.FeedHeaderBinding
 import ru.androidschool.intensiv.ui.afterTextChanged
 import timber.log.Timber
 
 class FeedFragment : Fragment(R.layout.feed_fragment) {
+
+    private var _binding: FeedFragmentBinding? = null
+    private var _searchBinding: FeedHeaderBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+    private val searchBinding get() = _searchBinding!!
 
     private val adapter by lazy {
         GroupAdapter<GroupieViewHolder>()
@@ -31,10 +38,21 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
         }
     }
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FeedFragmentBinding.inflate(inflater, container, false)
+        _searchBinding = FeedHeaderBinding.bind(binding.root)
+        return binding.root
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        search_toolbar.search_edit_text.afterTextChanged {
+
+        searchBinding.searchToolbar.binding.searchEditText.afterTextChanged {
             Timber.d(it.toString())
             if (it.toString().length > MIN_LENGTH) {
                 openSearch(it.toString())
@@ -55,7 +73,7 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
             )
         )
 
-        movies_recycler_view.adapter = adapter.apply { addAll(moviesList) }
+        binding.moviesRecyclerView.adapter = adapter.apply { addAll(moviesList) }
 
         // Используя Мок-репозиторий получаем фэйковый список фильмов
         // Чтобы отобразить второй ряд фильмов
@@ -87,11 +105,17 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
 
     override fun onStop() {
         super.onStop()
-        search_toolbar.clear()
+        searchBinding.searchToolbar.clear()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.main_menu, menu)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+        _searchBinding = null
     }
 
     companion object {
