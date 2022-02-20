@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 
 apply from: "../ktlint.gradle"
 
@@ -36,8 +35,8 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8
     }
 
-    androidExtensions {
-        experimental = true
+    buildFeatures {
+        viewBinding true
     }
 }
 
@@ -71,8 +70,8 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
 
     // Groupie
-    implementation "com.xwray:groupie:$rootProject.groupieVersion"
-    implementation "com.xwray:groupie-kotlin-android-extensions:$rootProject.groupieVersion"
+    implementation "com.github.lisawray.groupie:groupie:$rootProject.groupieVersion"
+    implementation "com.github.lisawray.groupie:groupie-viewbinding:$rootProject.groupieVersion"
 
     implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
 }

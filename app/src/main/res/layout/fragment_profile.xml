@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context=".ui.profile.ProfileFragment">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -77,7 +78,7 @@
             app:tabTextColor="@color/textColorGrey" />
 
         <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/doppelgangerViewPager"
+            android:id="@+id/profileViewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/blueDark" />

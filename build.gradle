@@ -4,8 +4,7 @@ buildscript {
     ext.kotlinVersion = '1.6.10'
     repositories {
         google()
-        jcenter()
-
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.1'
@@ -18,7 +17,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -45,5 +45,5 @@ ext {
     espressoVersion = '3.5.0-alpha04'
     timberVersion = '5.0.1'
 
-    groupieVersion = '2.8.0'
+    groupieVersion = '2.10.0'
 }
