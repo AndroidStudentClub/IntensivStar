@@ -46,9 +46,6 @@
         android:label="@string/tv_show"
         tools:layout="@layout/tv_shows_fragment">
 
-        <argument
-            android:name="myarg"
-            android:defaultValue="Android!" />
     </fragment>
     <fragment
         android:id="@+id/movie_details_fragment"
