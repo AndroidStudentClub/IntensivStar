@@ -60,9 +60,7 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
         }
 
         // Используя Мок-репозиторий получаем фэйковый список фильмов
-        val moviesList = listOf(
-            MainCardContainer(
-                R.string.recommended,
+        val moviesList =
                 MockRepository.getMovies().map {
                     MovieItem(it) { movie ->
                         openMovieDetails(
@@ -70,25 +68,10 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
                         )
                     }
                 }.toList()
-            )
-        )
+
 
         binding.moviesRecyclerView.adapter = adapter.apply { addAll(moviesList) }
 
-        // Используя Мок-репозиторий получаем фэйковый список фильмов
-        // Чтобы отобразить второй ряд фильмов
-        val newMoviesList = listOf(
-            MainCardContainer(
-                R.string.upcoming,
-                MockRepository.getMovies().map {
-                    MovieItem(it) { movie ->
-                        openMovieDetails(movie)
-                    }
-                }.toList()
-            )
-        )
-
-        adapter.apply { addAll(newMoviesList) }
     }
 
     private fun openMovieDetails(movie: Movie) {
