@@ -6,6 +6,7 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
 
 
+
 name: Java CI with Gradle
 
 on:
@@ -39,6 +40,7 @@ jobs:
 
     - name: Run unit tests
       run: ./gradlew test
+      uses: actions/upload-artifact@v2
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
