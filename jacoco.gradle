@@ -1,0 +1,36 @@
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = "0.8.11"
+}
+
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses true
+    jacoco.excludes = ['jdk.internal.*']
+}
+
+task jacocoUnitTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
+    reports {
+        csv {
+            enabled false
+        }
+        xml {
+            enabled true
+        }
+        html {
+            enabled true
+        }
+    }
+
+    // Add files that should not be listed in the report (e.g. generated Files from dagger)
+    def fileFilter = ['**/*Dagger.*']
+
+    def kotlinDebugTree = fileTree(dir: "${buildDir}/tmp/kotlin-classes/debug", excludes: fileFilter)
+
+    def mainSrc = "$projectDir/src/main/java"
+    sourceDirectories.from = files([mainSrc])
+    classDirectories.from = files([kotlinDebugTree])
+
+    // Make sure the path is correct (if not run the unit tests and try find the .exec file that is generated after the unit tests are finished should be similar to that one)
+    executionData.from = fileTree(dir: "$buildDir", includes: ["outputs/unit_test_code_coverage/debugUnitTest/testDebugUnitTest.exec"])
+}

@@ -3,16 +3,19 @@ apply plugin: 'kotlin-android'
 
 apply from: "../ktlint.gradle"
 
+
 def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+
 
 android {
     defaultConfig {
         applicationId "ru.androidschool.intensiv"
         minSdkVersion 21
         targetSdkVersion 34
-        compileSdk 34
+        compileSdkVersion 34
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -20,7 +23,11 @@ android {
         buildConfigField 'String', 'THE_MOVIE_DATABASE_API', keystoreProperties['THE_MOVIE_DATABASE_API']
     }
     buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
         release {
+            testCoverageEnabled true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
