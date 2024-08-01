@@ -59,7 +59,7 @@ git push origin feature/home-work-1
 
 ### Code Style
 
-- [Kotlin Code Style](Code Style https://developer.android.com/kotlin/style-guide#import_statements)
+- [Kotlin Code Style](https://developer.android.com/kotlin/style-guide#import_statements)
 
 ### 📚 Полезные материалы:
 
