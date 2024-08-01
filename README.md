@@ -19,4 +19,5 @@
 
 ## Обучающий курс📚:
 [Записаться на курс по ссылке](http://intensive.androidschool.ru/?utm_source=github&utm_medium=readme&utm_campaign=description)
+
 Подписывайтесь на наш [телеграм-канал](https://t.me/android_school_ru)
