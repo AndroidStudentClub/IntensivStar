@@ -51,7 +51,6 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         searchBinding.searchToolbar.binding.searchEditText.afterTextChanged {
             Timber.d(it.toString())
             if (it.toString().length > MIN_LENGTH) {
@@ -61,17 +60,15 @@ class FeedFragment : Fragment(R.layout.feed_fragment) {
 
         // Используя Мок-репозиторий получаем фэйковый список фильмов
         val moviesList =
-                MockRepository.getMovies().map {
-                    MovieItem(it) { movie ->
-                        openMovieDetails(
-                            movie
-                        )
-                    }
-                }.toList()
-
+            MockRepository.getMovies().map {
+                MovieItem(it) { movie ->
+                    openMovieDetails(
+                        movie
+                    )
+                }
+            }.toList()
 
         binding.moviesRecyclerView.adapter = adapter.apply { addAll(moviesList) }
-
     }
 
     private fun openMovieDetails(movie: Movie) {
