@@ -25,12 +25,12 @@
 
 ### 👨‍💻 Исходный код примеров из вебинара:
 
-[Отношение 1 ко многим](https://github.com/AndroidStudentClub/Room-Relations/tree/feature/1-to-many)
-[Многие ко многим](https://github.com/AndroidStudentClub/Room-Relations/tree/feature/many-to-many)
-[Миграции](https://github.com/AndroidStudentClub/Room-Migration)
+- [Отношение 1 ко многим](https://github.com/AndroidStudentClub/Room-Relations/tree/feature/1-to-many)
+- [Многие ко многим](https://github.com/AndroidStudentClub/Room-Relations/tree/feature/many-to-many)
+- [Миграции](https://github.com/AndroidStudentClub/Room-Migration)
 
 ### 📚 Полезные материалы:
-Используем join в SQLite-запросах Room для android (https://habr.com/ru/articles/570400/)
-Работа LRU (https://www.youtube.com/watch?v=R5ON3iwx78M)
-Каскадное удаление (https://developer.android.com/reference/androidx/room/ForeignKey#constants_1)
+- Используем join в SQLite-запросах Room для android (https://habr.com/ru/articles/570400/)
+- Работа LRU (https://www.youtube.com/watch?v=R5ON3iwx78M)
+- Каскадное удаление (https://developer.android.com/reference/androidx/room/ForeignKey#constants_1)
 
