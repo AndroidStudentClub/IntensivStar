@@ -16,6 +16,8 @@
 - Домашнее задание 3 [RxJava part 1](HomeWork3.md)
 - Домашнее задание 4 [RxJava part 2](HomeWork4.md)
 - Домашнее задание 5 [Room](HomeWork5.md)
+- Домашнее задание 6 [RecyclerView](HomeWork6.md)
+- Домашнее задание 7 [Clean Architecture](HomeWork7.md)
 
 ## Обучающий курс📚:
 [Записаться на курс по ссылке](http://intensive.androidschool.ru/?utm_source=github&utm_medium=readme&utm_campaign=description)
