@@ -3,7 +3,7 @@
 ### 🎯 Цели домашнего задания:
 
 - Освоить принципы работы MVVM
-- Использовать Android Architecture Components: LiveData/StateFloe, ViewModel для реализации MVVM
+- Использовать Android Architecture Components: LiveData/StateFlow, ViewModel для реализации MVVM
 - Освоить принципы работы MVI
 
 ### 📚 Задание
