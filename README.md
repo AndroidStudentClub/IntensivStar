@@ -19,6 +19,7 @@
 - Домашнее задание 6 [RecyclerView](HomeWork6.md)
 - Домашнее задание 7 [Clean Architecture](HomeWork7.md)
 - Домашнее задание 8 [MVVM и MVI](HomeWork8.md)
+- Домашнее задание 9 [Dependency Injection](HomeWork9.md)
 
 ## Обучающий курс📚:
 [Записаться на курс по ссылке](http://intensive.androidschool.ru/?utm_source=github&utm_medium=readme&utm_campaign=description)
