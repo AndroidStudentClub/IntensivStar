@@ -20,6 +20,10 @@
 - Домашнее задание 7 [Clean Architecture](HomeWork7.md)
 - Домашнее задание 8 [MVVM и MVI](HomeWork8.md)
 - Домашнее задание 9 [Dependency Injection](HomeWork9.md)
+- Домашнее задание 10 [Многомодульность](HomeWork10.md)
+- Домашнее задание 11 [Тестирование](HomeWork11.md)
+- Домашнее задание 12 [Kotlin Coroutines и Flow](HomeWork12.md)
+- Домашнее задание 13 [Мониторинг приложения](HomeWork13.md)
 
 ## Обучающий курс📚:
 [Записаться на курс по ссылке](http://intensive.androidschool.ru/?utm_source=github&utm_medium=readme&utm_campaign=description)
